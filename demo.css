@@ -1,0 +1,96 @@
+.parent {
+    border: 3px solid black;
+    padding: 10px;
+    width: 1180px;
+    height: 600px;
+    background-color:darkturquoise;
+    margin: top right bottom left;
+           margin: 40px 25px 40px 25px;
+}
+
+.child {
+    border: 3px solid black;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    height: 95%;
+    margin: top right bottom left;
+           margin: 10px 10px 10px 10px;
+           
+}
+
+.left-card{
+    border: black 2px solid;
+    margin: top right bottom left;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.profile-name {
+    background-color:darkcyan;
+    /* border: 2px solid black; */
+    border-top: 2px solid black;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 16px;
+}
+
+.right-card {
+    height: 100%;
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.row1 {
+    background-color: yellow;
+    border: 2px solid black;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 {
+    background-color: teal;
+    border: 2px solid black;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row3 {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.box-left, .box-mid, .box-right {
+    border: 2px solid black;
+    flex: 1;
+    display: flex;
+    padding: 10px;
+}
+
+.box-left {
+    background-color: yellow;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.box-mid {
+    background-color: blueviolet;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.box-right {
+    background-color: yellow;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
