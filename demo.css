@@ -1,96 +1,140 @@
-.parent {
-    border: 3px solid black;
-    padding: 10px;
-    width: 1180px;
-    height: 600px;
-    background-color:darkturquoise;
-    margin: top right bottom left;
-           margin: 40px 25px 40px 25px;
+body {
+  background-color: white;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
 
-.child {
-    border: 3px solid black;
-    display: block;
-    display: flex;
-    flex-direction: row;
-    height: 95%;
-    margin: top right bottom left;
-           margin: 10px 10px 10px 10px;
-           
+.outer-border {
+  background-color: darkturquoise;
+  border: 3px solid black;
+  padding: 20px;
 }
 
-.left-card{
-    border: black 2px solid;
-    margin: top right bottom left;
-    margin: 0px 10px 0px 10px;
-    display: flex;
-    flex-direction: column;
+.inner-border {
+  border: 3px solid black;
+  padding: 0 15px;
 }
 
+.box {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
 
+.left-top {
+  min-height: 440px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
 
-.profile-name {
-    background-color:darkcyan;
-    /* border: 2px solid black; */
-    border-top: 2px solid black;
-    text-align: center;
-    padding: 18px 0;
-    font-size: 16px;
+.left-top img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.left-bottom {
+  background-color: darkcyan;
+  min-height: 90px;
+  flex: 1;
 }
 
 .right-card {
-    height: 100%;
-    margin: 0px 10px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.row1 {
-    background-color: yellow;
-    border: 2px solid black;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.right-top-half {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.row2 {
-    background-color: teal;
-    border: 2px solid black;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.right-top {
+  background-color: yellow;
+  flex: 1;
 }
 
-.row3 {
-    flex: 2;
-    display: flex;
-    flex-direction: row;
+.right-middle {
+  background-color: darkcyan;
+  flex: 1;
+  align-items: flex-start;
 }
 
-.box-left, .box-mid, .box-right {
-    border: 2px solid black;
-    flex: 1;
-    display: flex;
-    padding: 10px;
+.right-bottom-row {
+  flex: 1;
 }
 
-.box-left {
-    background-color: yellow;
-    align-items: flex-start;
-    justify-content: flex-start;
+.right-bottom-item {
+  height: 100%;
 }
 
-.box-mid {
-    background-color: blueviolet;
-    align-items: flex-end;
-    justify-content: center;
+.right-bottom-item {
+  height: 100%;
+  padding: 10px;
+  /* font-weight:500 */
 }
 
-.box-right {
-    background-color: yellow;
-    align-items: flex-end;
-    justify-content: flex-end;
+.box-1 {
+  background-color: yellow;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.box-2 {
+  background-color: blueviolet;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.box-3 {
+  background-color: yellow;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.left-top,
+.right-top {
+  border-top: none;
+}
+
+.left-bottom,
+.right-bottom-item {
+  border-bottom: none;
+}
+
+.left-bottom,
+.right-middle {
+  border-top: none;
+}
+
+.right-bottom-item {
+  border-top: none;
+}
+
+.col-4:not(:first-child) .right-bottom-item {
+  border-left: none;
+}
+
+@media (max-width: 767px) {
+  .left-top {
+    min-height: 220px;
+  }
+  .right-bottom-item {
+    min-height: 120px;
+  }
 }

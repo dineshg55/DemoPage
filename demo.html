@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="demo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Practice</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="demo.css" rel="stylesheet">
+
 </head>
 <body>
-    
-    <div class="parent">
-        <div class="child">
-            <div class="left-card">
-                <img src="images.png" alt="Profile Picture">
-                <div class="profile-name">Profile Name</div>
-            </div>
-            <div class="right-card">
-                <div class="row1">Center Aligned</div>
-                <div class="row2">Top Center Aligned</div>
-                <div class="row3">
-                    <div class="box-left">Top Left</div>
-                    <div class="box-mid">Bottom</div>
-                    <div class="box-right">Bottom Right</div>
-                </div>
-            </div>
+
+<div class="outer-border">
+  <div class="inner-border">
+
+    <div class="row g-3">
+
+      <div class="col-12 col-md-6">
+        <div class="left-card">
+          <div class="box left-top">
+            <img src="images.png" alt="Profile image">
+          </div>
+          <div class="box left-bottom">
+            Profile Name
+          </div>
         </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="right-card">
+          <div class="right-top-half">
+            <!-- Top box -->
+            <div class="box right-top">
+              Center Aligned
+            </div>
+
+            <div class="box right-middle">
+              Top Center Aligned
+            </div>
+          </div>
+
+          <div class="row g-0 right-bottom-row">
+            <div class="col-4">
+              <div class="box right-bottom-item box-1">Top Left</div>
+            </div>
+            <div class="col-4">
+              <div class="box right-bottom-item box-2">Bottom</div>
+            </div>
+            <div class="col-4">
+              <div class="box right-bottom-item box-3">Bottom Right</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-    
+
+  </div>
+</div>
+
 </body>
 </html>
